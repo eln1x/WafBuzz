@@ -1,0 +1,15 @@
+# Define values that we'll pass to our urllib and urllib2 methods
+url = 'http://www.something.com/blah'
+user_host = 'example.com'
+values = {'name' : 'Engineero',      # dict of keys and values for our POST data
+          'location' : 'Interwebs',
+          'language' : 'Python' }
+headers = { 'Host' : user_host }     # dict of keys and values for our header
+
+# Set up our request, execute, and read
+data = urlencode(values)             # encode for sending URL request
+req = Request(url, data, headers)    # make POST request to url with data and headers
+response = urlopen(req)              # get the response from the server
+the_page = response.read()           # read the response from the server
+
+pycallgraph -e "argparse*" -e "platform*" -e "re*" -e "sre*" -e "gettext*"  -ng graphviz -- wafpackets.py -d ahmad.com

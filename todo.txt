@@ -1,0 +1,4 @@
+#timeout for the connection     |done
+#host:port  for httpcompliance plugin |done
+handle errors and closed port
+move list plugins inside pluginmanager
